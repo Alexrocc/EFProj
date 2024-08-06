@@ -18,4 +18,5 @@ public class TaskAttachment
 
     [Column("tasks_id")]
     public int TaskId { get; set; }
+    public TaskData? Task { get; set; }
 }

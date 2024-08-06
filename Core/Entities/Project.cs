@@ -19,6 +19,8 @@ public class Project
     public DateTime EndDate { get; set; }
     [Column("project_categories_id")]
     public int ProjCatId { get; set; }
+    [ForeignKey("ProjCatId")]
+    public required ProjectCategory ProjectCategory { get; set; }
     [Column("users_manager_id")]
     public int ManagerId { get; set; }
     [ForeignKey("ManagerId")]

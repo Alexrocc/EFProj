@@ -22,9 +22,13 @@ public class TaskData
     public DateTime DueDate { get; set; }
 
     [Column("projects_id")]
-    public int ProjectData { get; set; }
+    public int ProjectId { get; set; }
+    [ForeignKey("ProjectId")]
+    public Project? ProjectData { get; set; }
 
     [Column("users_id")]
-    public int UserId { get; set; }
+    public int AssignedUser { get; set; }
+    [ForeignKey("AssignedUser")]
+    public User? User { get; set; }
 
 }
