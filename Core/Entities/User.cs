@@ -24,6 +24,8 @@ public class User
 
     [ForeignKey("role_id")]
     [Column("role_id")]
-
+    [Required]
     public required Role Role { get; set; }
+
+    public List<Project>? AssignedProjects { get; set; }
 }

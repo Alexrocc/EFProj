@@ -22,7 +22,7 @@ public class TaskData
     public DateTime DueDate { get; set; }
 
     [Column("projects_id")]
-    public int ProjectId { get; set; }
+    public int ProjectData { get; set; }
 
     [Column("users_id")]
     public int UserId { get; set; }

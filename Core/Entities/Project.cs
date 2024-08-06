@@ -21,4 +21,8 @@ public class Project
     public int ProjCatId { get; set; }
     [Column("users_manager_id")]
     public int ManagerId { get; set; }
+    [ForeignKey("ManagerId")]
+    public User? Manager { get; set; }
+
+
 }

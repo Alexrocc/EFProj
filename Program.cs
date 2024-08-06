@@ -1,5 +1,6 @@
 ﻿using EFProj.Core.DataAccess;
 using EFProj.Core.Entities;
+using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
 
 
@@ -29,7 +30,7 @@ try
 
     using (var context = new PmsContext(connString))
     {
-        var roles = context.Roles.ToList();
+        // var roles = context.Roles.ToList();
         // var user1 = new User
         // {
         //     Username = "Luigi",
@@ -41,9 +42,16 @@ try
         // context.Users.Add(); //adding a new row in the table users
         // context.SaveChanges();  //it is HERE that the change in the table is truly made
 
-        foreach (var user in context.Users.ToList())
+        foreach (var user in context.Users.Include(user => user.AssignedProjects).Include(user => user.Role).ToList()) //The Include() method will include the specified related table (as set in the class as a foreign key)
         {
             Console.WriteLine($"{user.Username}, {user.Role.RoleName}");
+            if (user.AssignedProjects != null)
+            {
+                foreach (var proj in user.AssignedProjects)
+                {
+                    Console.WriteLine($"{proj.ProjName}");
+                }
+            }
         }
     }
 }

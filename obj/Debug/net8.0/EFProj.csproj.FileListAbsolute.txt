@@ -28,3 +28,4 @@ C:\Users\alero\Desktop\EFProject\EFProj\obj\Debug\net8.0\EFProj.genruntimeconfig
 C:\Users\alero\Desktop\EFProject\EFProj\obj\Debug\net8.0\ref\EFProj.dll
 C:\Users\alero\Desktop\EFProject\EFProj\bin\Debug\net8.0\MySqlConnector.dll
 C:\Users\alero\Desktop\EFProject\EFProj\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\alero\Desktop\EFProject\EFProj\obj\Debug\net8.0\EFProj.sourcelink.json
